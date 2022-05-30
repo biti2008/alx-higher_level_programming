@@ -1,4 +1,2 @@
 #!/bin/bash
 python $PYFILE
-print("print the first python file")
-

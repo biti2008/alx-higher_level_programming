@@ -1,3 +1,4 @@
 #!/bin/bash
 python $PYFILE
-print()[D"print the first pyton)[D")
+print("print the first python file")
+

@@ -1,40 +1,21 @@
 #!/usr/bin/python3
 """
-=============================
-Module with a class Myint
-=============================
+    100-my_int: class MyInt implements int
 """
 
 
 class MyInt(int):
-    """class that inherits from int"""
+    """
+        MyInt implements int. (inherits from)
+    """
+    def __init__(self, number):
+        self.number = number
 
-    def __init__(self, my_int):
-        """for initialize a value my_int"""
+    def __ne__(self, value):
+        return (self.number == value)
 
-        self.my_int = my_int
+    def __eq__(self, value):
+        return (self.number != value)
 
-    @property
-    def my_int(self):
-        return self.__my_int
-
-    @my_int.setter
-    def my_int(self, my_int):
-        if type(my_int) is not int:
-            raise TypeError("my_int must be an integer")
-        else:
-            self.__my_int = my_int
-
-    def __eq__(self, other):
-        """equal method"""
-
-        if self.my_int == other:
-            return False
-        else:
-            return True
-
-    def __ne__(self, other):
-            if self.my_int != other:
-                return False
-            else:
-                return True
+    def __str__(self):
+        return (str(self.number))
